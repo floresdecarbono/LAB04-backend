@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @ControllerAdvice
-public class GlobalExceptionHandler {
+public class BoardExceptionHandler {
 
     public record ErrorDetails(Instant timestamp, int status, String error, String message, String path) {}
 
