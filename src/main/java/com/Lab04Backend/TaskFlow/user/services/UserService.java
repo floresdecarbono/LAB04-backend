@@ -1,5 +1,7 @@
 package com.Lab04Backend.TaskFlow.user.services;
 
+import com.Lab04Backend.TaskFlow.models.Members;
+import com.Lab04Backend.TaskFlow.repositories.MemberRepository;
 import com.Lab04Backend.TaskFlow.user.dtos.RegisterUserDTO;
 import com.Lab04Backend.TaskFlow.user.entity.User;
 import com.Lab04Backend.TaskFlow.user.exceptions.EmailAlreadyExistsException;
@@ -13,6 +15,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     private final UserRepository repository;
+    private final MemberRepository memberRepository;
 
     private final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
@@ -30,6 +33,12 @@ public class UserService {
                 .birthday(dto.birthday())
                 .build();
 
-        return repository.save(user);
+        Members member = Members.builder()
+                .user(user)
+                .build();
+
+        user = repository.save(user);
+        memberRepository.save(member);
+        return user;
     }
 }

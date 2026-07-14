@@ -1,7 +1,8 @@
-package com.Lab04Backend.TaskFlow.dtos;
+package com.Lab04Backend.TaskFlow.dtos.board;
 
 import com.Lab04Backend.TaskFlow.models.Board;
-import com.Lab04Backend.TaskFlow.models.BoardStatus;
+import com.Lab04Backend.TaskFlow.models.enums.BoardStatus;
+import com.Lab04Backend.TaskFlow.user.entity.User;
 
 import java.time.Instant;
 import java.util.Collections;
@@ -11,9 +12,9 @@ import java.util.UUID;
 public record BoardResponse(
     UUID id,
     BoardStatus status,
-    List<UUID> userIds,
-    List<UUID> adminIds,
-    List<UUID> taskIds,
+    List<User> users,
+    List<User> admins,
+    // List<UUID> taskIds,
     Instant createdAt,
     Instant updatedAt,
     Instant deletedAt
@@ -22,9 +23,8 @@ public record BoardResponse(
         return new BoardResponse(
             board.getId(),
             board.getStatus(),
-            board.getUserIds() != null ? board.getUserIds() : Collections.emptyList(),
-            board.getAdminIds() != null ? board.getAdminIds() : Collections.emptyList(),
-            Collections.emptyList(),
+            board.getUsers(),
+            board.getAdmins(),
             board.getCreatedAt(),
             board.getUpdatedAt(),
             board.getDeletedAt()

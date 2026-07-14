@@ -1,7 +1,7 @@
 package com.Lab04Backend.TaskFlow.controllers;
 
-import com.Lab04Backend.TaskFlow.dtos.BoardResponse;
-import com.Lab04Backend.TaskFlow.dtos.CreateBoardRequest;
+import com.Lab04Backend.TaskFlow.dtos.board.BoardResponse;
+import com.Lab04Backend.TaskFlow.dtos.board.CreateBoardRequest;
 import com.Lab04Backend.TaskFlow.services.BoardService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/boards")
+@RequestMapping("/api/boards")
 @RequiredArgsConstructor
 public class BoardController {
 

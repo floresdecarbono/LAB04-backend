@@ -1,6 +1,6 @@
-package com.Lab04Backend.TaskFlow.dtos;
+package com.Lab04Backend.TaskFlow.dtos.board;
 
-import com.Lab04Backend.TaskFlow.models.BoardStatus;
+import com.Lab04Backend.TaskFlow.models.enums.BoardStatus;
 import jakarta.validation.constraints.NotNull;
 
 import java.util.List;

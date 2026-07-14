@@ -1,10 +1,10 @@
 package com.Lab04Backend.TaskFlow.services;
 
 import com.Lab04Backend.TaskFlow.config.ResourceNotFoundException;
-import com.Lab04Backend.TaskFlow.dtos.BoardResponse;
-import com.Lab04Backend.TaskFlow.dtos.CreateBoardRequest;
+import com.Lab04Backend.TaskFlow.dtos.board.BoardResponse;
+import com.Lab04Backend.TaskFlow.dtos.board.CreateBoardRequest;
 import com.Lab04Backend.TaskFlow.models.Board;
-import com.Lab04Backend.TaskFlow.models.BoardStatus;
+import com.Lab04Backend.TaskFlow.models.enums.BoardStatus;
 import com.Lab04Backend.TaskFlow.repositories.BoardRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

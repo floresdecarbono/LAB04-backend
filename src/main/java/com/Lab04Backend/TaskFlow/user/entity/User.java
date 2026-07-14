@@ -1,10 +1,12 @@
 package com.Lab04Backend.TaskFlow.user.entity;
 
+import com.Lab04Backend.TaskFlow.models.Board;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -38,8 +40,8 @@ public class User {
 
     private LocalDateTime deletedAt;
 
-    // @OneToMany(mappedBy = "user")
-    // private List<Board> board;
+    @ManyToMany(fetch = FetchType.LAZY)
+    private List<Board> board;
 
     // @OneToMany(mappedBy = "user")
     // private List<Task> task;

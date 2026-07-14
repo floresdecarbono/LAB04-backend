@@ -1,5 +1,7 @@
 package com.Lab04Backend.TaskFlow.models;
 
+import com.Lab04Backend.TaskFlow.models.enums.BoardStatus;
+import com.Lab04Backend.TaskFlow.user.entity.User;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -27,23 +29,19 @@ public class Board {
     @Column(nullable = false)
     private BoardStatus status;
 
-    @ElementCollection
-    @CollectionTable(
-        name = "board_users",
-        joinColumns = @JoinColumn(name = "board_id")
+    @ManyToMany
+    @JoinTable(
+            name = "board_users"
     )
-    @Column(name = "user_id")
     @Builder.Default
-    private List<UUID> userIds = new ArrayList<>();
+    private List<User> users = new ArrayList<>();
 
-    @ElementCollection
-    @CollectionTable(
-        name = "board_admins",
-        joinColumns = @JoinColumn(name = "board_id")
+    @ManyToMany
+    @JoinTable(
+            name = "board_admins"
     )
-    @Column(name = "user_id")
     @Builder.Default
-    private List<UUID> adminIds = new ArrayList<>();
+    private List<User> admins = new ArrayList<>();
 
     @CreationTimestamp
     @Column(nullable = false, updatable = false)
