@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/activities")
 @RequiredArgsConstructor
 public class ActivityController {
 
     private final ActivityService activityService;
     private final UserRepository userRepository;
 
-    @GetMapping("/{userId}/activities")
+    @GetMapping("/{userId}")
     public List<ActivityResponseDTO> getLastActivities(
             @PathVariable String userId) {
 
