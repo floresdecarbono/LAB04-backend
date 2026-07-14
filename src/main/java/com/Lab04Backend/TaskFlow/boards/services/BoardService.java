@@ -1,10 +1,11 @@
-package com.Lab04Backend.TaskFlow.services;
+package com.Lab04Backend.TaskFlow.boards.services;
 
-import com.Lab04Backend.TaskFlow.config.ResourceNotFoundException;
-import com.Lab04Backend.TaskFlow.dtos.board.BoardResponse;
-import com.Lab04Backend.TaskFlow.dtos.board.CreateBoardRequest;
-import com.Lab04Backend.TaskFlow.models.Board;
-import com.Lab04Backend.TaskFlow.repositories.BoardRepository;
+import com.Lab04Backend.TaskFlow.boards.config.ResourceNotFoundException;
+import com.Lab04Backend.TaskFlow.boards.dtos.BoardResponse;
+import com.Lab04Backend.TaskFlow.boards.dtos.CreateBoardRequest;
+import com.Lab04Backend.TaskFlow.boards.models.Board;
+import com.Lab04Backend.TaskFlow.boards.repositories.BoardRepository;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,6 +25,8 @@ public class BoardService {
     public BoardResponse createBoard(CreateBoardRequest request) {
         Board board = Board.builder()
             .status(request.status())
+            .users(request.users())
+            .admins(request.admins())
             .build();
 
         Board savedBoard = boardRepository.save(board);

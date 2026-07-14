@@ -1,11 +1,13 @@
-package com.Lab04Backend.TaskFlow.services;
+package com.Lab04Backend.TaskFlow.boards.services;
 
-import com.Lab04Backend.TaskFlow.config.ResourceNotFoundException;
-import com.Lab04Backend.TaskFlow.dtos.board.BoardResponse;
-import com.Lab04Backend.TaskFlow.dtos.board.CreateBoardRequest;
-import com.Lab04Backend.TaskFlow.models.Board;
-import com.Lab04Backend.TaskFlow.models.enums.BoardStatus;
-import com.Lab04Backend.TaskFlow.repositories.BoardRepository;
+import com.Lab04Backend.TaskFlow.boards.config.ResourceNotFoundException;
+import com.Lab04Backend.TaskFlow.boards.dtos.BoardResponse;
+import com.Lab04Backend.TaskFlow.boards.dtos.CreateBoardRequest;
+import com.Lab04Backend.TaskFlow.boards.models.Board;
+import com.Lab04Backend.TaskFlow.boards.models.BoardStatus;
+import com.Lab04Backend.TaskFlow.boards.repositories.BoardRepository;
+import com.Lab04Backend.TaskFlow.boards.services.BoardService;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

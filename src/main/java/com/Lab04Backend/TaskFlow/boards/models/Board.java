@@ -1,6 +1,6 @@
-package com.Lab04Backend.TaskFlow.models;
+package com.Lab04Backend.TaskFlow.boards.models;
 
-import com.Lab04Backend.TaskFlow.models.enums.BoardStatus;
+import com.Lab04Backend.TaskFlow.boards.enums.BoardStatus;
 import com.Lab04Backend.TaskFlow.user.entity.User;
 import jakarta.persistence.*;
 import lombok.*;

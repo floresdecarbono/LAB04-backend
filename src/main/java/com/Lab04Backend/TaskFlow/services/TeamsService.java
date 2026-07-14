@@ -1,6 +1,6 @@
 package com.Lab04Backend.TaskFlow.services;
 
-import com.Lab04Backend.TaskFlow.config.ResourceNotFoundException;
+import com.Lab04Backend.TaskFlow.boards.config.ResourceNotFoundException;
 import com.Lab04Backend.TaskFlow.dtos.teams.TeamsRequest;
 import com.Lab04Backend.TaskFlow.dtos.teams.TeamsResponse;
 import com.Lab04Backend.TaskFlow.models.Members;

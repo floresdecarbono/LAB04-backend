@@ -1,6 +1,6 @@
 package com.Lab04Backend.TaskFlow.user.entity;
 
-import com.Lab04Backend.TaskFlow.models.Board;
+import com.Lab04Backend.TaskFlow.boards.models.Board;
 import jakarta.persistence.*;
 import lombok.*;
 

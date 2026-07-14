@@ -1,4 +1,4 @@
-package com.Lab04Backend.TaskFlow.controllers;
+package com.Lab04Backend.TaskFlow.members.controllers;
 
 import com.Lab04Backend.TaskFlow.dtos.member.MemberRequest;
 import com.Lab04Backend.TaskFlow.dtos.member.MemberResponse;

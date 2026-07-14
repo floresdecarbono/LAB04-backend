@@ -1,6 +1,6 @@
 package com.Lab04Backend.TaskFlow.services;
 
-import com.Lab04Backend.TaskFlow.config.ResourceNotFoundException;
+import com.Lab04Backend.TaskFlow.boards.config.ResourceNotFoundException;
 import com.Lab04Backend.TaskFlow.dtos.member.MemberRequest;
 import com.Lab04Backend.TaskFlow.dtos.member.MemberResponse;
 import com.Lab04Backend.TaskFlow.dtos.member.TeamMemberResponse;
@@ -11,6 +11,7 @@ import com.Lab04Backend.TaskFlow.repositories.TeamsRepository;
 import com.Lab04Backend.TaskFlow.teammember.repository.TeamMemberRepository;
 import org.springframework.stereotype.Service;
 
+import java.lang.module.ResolutionException;
 import java.lang.reflect.Member;
 import java.util.List;
 import java.util.UUID;
@@ -48,7 +49,7 @@ public class MemberService {
 
     public MemberResponse getMemberById(UUID id) {
         Members member = memberRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Member with ID " + id + " not found."));
+                .orElseThrow(() -> new ResourceNotFoundException("Team with ID " + id + " not found."));
 
         return MemberResponse.fromEntity(member);
 

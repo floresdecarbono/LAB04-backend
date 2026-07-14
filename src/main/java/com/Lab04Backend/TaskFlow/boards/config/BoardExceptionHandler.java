@@ -1,4 +1,4 @@
-package com.Lab04Backend.TaskFlow.config;
+package com.Lab04Backend.TaskFlow.boards.config;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

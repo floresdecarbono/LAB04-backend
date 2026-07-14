@@ -27,7 +27,7 @@ public class Teams {
 
 
     public void addMember(TeamMember member) {
-        if (member.getRole() == MemberRole.READ) throw new IllegalRoleException("Viewers cannot be added in teams");
+        if (member.getRole() == MemberRole.READ || members.contains(member)) throw new IllegalRoleException("Viewers cannot be added in teams");
         members.add(member);
     }
 
