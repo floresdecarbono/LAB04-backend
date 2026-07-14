@@ -1,12 +1,12 @@
-package com.Lab04Backend.TaskFlow.dtos;
-
-import com.Lab04Backend.TaskFlow.models.Board;
-import com.Lab04Backend.TaskFlow.models.BoardStatus;
+package com.Lab04Backend.TaskFlow.boards.dtos;
 
 import java.time.Instant;
 import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
+
+import com.Lab04Backend.TaskFlow.boards.models.Board;
+import com.Lab04Backend.TaskFlow.boards.models.BoardStatus;
 
 public record BoardResponse(
     UUID id,

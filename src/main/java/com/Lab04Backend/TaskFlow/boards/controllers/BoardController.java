@@ -1,8 +1,9 @@
-package com.Lab04Backend.TaskFlow.controllers;
+package com.Lab04Backend.TaskFlow.boards.controllers;
 
-import com.Lab04Backend.TaskFlow.dtos.BoardResponse;
-import com.Lab04Backend.TaskFlow.dtos.CreateBoardRequest;
-import com.Lab04Backend.TaskFlow.services.BoardService;
+import com.Lab04Backend.TaskFlow.boards.dtos.BoardResponse;
+import com.Lab04Backend.TaskFlow.boards.dtos.CreateBoardRequest;
+import com.Lab04Backend.TaskFlow.boards.services.BoardService;
+
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +15,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/boards")
+@RequestMapping("/api/boards")
 @RequiredArgsConstructor
 public class BoardController {
 
